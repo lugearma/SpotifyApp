@@ -14,6 +14,10 @@
 		9256C2241CDD745400FEF16E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9256C2221CDD745400FEF16E /* LaunchScreen.storyboard */; };
 		9256C22F1CDD745400FEF16E /* SpotifyAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9256C22E1CDD745400FEF16E /* SpotifyAppTests.swift */; };
 		9256C23A1CDD745400FEF16E /* SpotifyAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9256C2391CDD745400FEF16E /* SpotifyAppUITests.swift */; };
+		9256C2481CDE188100FEF16E /* ArtistsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9256C2471CDE188000FEF16E /* ArtistsViewController.swift */; };
+		9256C24A1CDE196C00FEF16E /* Artist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9256C2491CDE196C00FEF16E /* Artist.swift */; };
+		9256C24C1CDE9B2300FEF16E /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9256C24B1CDE9B2300FEF16E /* API.swift */; };
+		9256C24E1CDE9BE100FEF16E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9256C24D1CDE9BE100FEF16E /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +51,10 @@
 		9256C2351CDD745400FEF16E /* SpotifyAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SpotifyAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9256C2391CDD745400FEF16E /* SpotifyAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotifyAppUITests.swift; sourceTree = "<group>"; };
 		9256C23B1CDD745400FEF16E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9256C2471CDE188000FEF16E /* ArtistsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArtistsViewController.swift; sourceTree = "<group>"; };
+		9256C2491CDE196C00FEF16E /* Artist.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Artist.swift; sourceTree = "<group>"; };
+		9256C24B1CDE9B2300FEF16E /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		9256C24D1CDE9BE100FEF16E /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +107,10 @@
 			children = (
 				9256C2191CDD745400FEF16E /* AppDelegate.swift */,
 				9256C21B1CDD745400FEF16E /* ViewController.swift */,
+				9256C24B1CDE9B2300FEF16E /* API.swift */,
+				9256C24D1CDE9BE100FEF16E /* Constants.swift */,
+				9256C2471CDE188000FEF16E /* ArtistsViewController.swift */,
+				9256C2491CDE196C00FEF16E /* Artist.swift */,
 				9256C21D1CDD745400FEF16E /* Main.storyboard */,
 				9256C2201CDD745400FEF16E /* Assets.xcassets */,
 				9256C2221CDD745400FEF16E /* LaunchScreen.storyboard */,
@@ -256,8 +268,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9256C2481CDE188100FEF16E /* ArtistsViewController.swift in Sources */,
 				9256C21C1CDD745400FEF16E /* ViewController.swift in Sources */,
+				9256C24A1CDE196C00FEF16E /* Artist.swift in Sources */,
 				9256C21A1CDD745400FEF16E /* AppDelegate.swift in Sources */,
+				9256C24C1CDE9B2300FEF16E /* API.swift in Sources */,
+				9256C24E1CDE9BE100FEF16E /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
