@@ -8,7 +8,16 @@
 
 import Foundation
 
-struct Artist {
+class Artist {
     var name:String?
     
+//    var name: String {
+//        get {
+//            return self._name!
+//        }
+//    }
+    
+    init(name: String){
+        self.name = name
+    }
 }

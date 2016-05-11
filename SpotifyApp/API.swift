@@ -10,8 +10,36 @@ import Foundation
 
 class API{
     
-    class func getTopArtists(resposeBlock: (NSError?) -> Void){
-        let session = NSURLSession.sharedSession();
-        let url = NSURL(string: Constants.topArtist)
+    class func getTopArtists(responseBlock: (NSError?) -> Void){
+        let session = NSURLSession.sharedSession()
+        let url = NSURL(string: Constants.topArtist)!
+        let request = NSMutableURLRequest(URL: url)
+        
+        let task = session.dataTaskWithRequest(request){ (data, response, error) -> Void in
+            if let err = error{
+                responseBlock(err)
+            } else {
+                if let d = data {
+                    let result = try! NSJSONSerialization.JSONObjectWithData(d, options: NSJSONReadingOptions())
+                    if let artists = result["artists"] as? [String: AnyObject]{
+                        if let artist = artists["artist"] as? [[String: AnyObject]]{
+                            for item in artist{
+                                if let name = item["name"]{
+                                    print(name)
+                                }
+                                if let listeners = item["listeners"]{
+                                    print(listeners)
+                                }
+                            }
+                        }else{
+                            print("No hay dos")
+                        }
+                    }else{
+                        print("No tiene el dato")
+                    }
+                }
+            }
+        }
+        task.resume()
     }
 }
