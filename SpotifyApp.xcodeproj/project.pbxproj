@@ -18,6 +18,7 @@
 		9256C24A1CDE196C00FEF16E /* Artist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9256C2491CDE196C00FEF16E /* Artist.swift */; };
 		9256C24C1CDE9B2300FEF16E /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9256C24B1CDE9B2300FEF16E /* API.swift */; };
 		9256C24E1CDE9BE100FEF16E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9256C24D1CDE9BE100FEF16E /* Constants.swift */; };
+		9256C2501CE380F800FEF16E /* ArtistList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9256C24F1CE380F800FEF16E /* ArtistList.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		9256C2491CDE196C00FEF16E /* Artist.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Artist.swift; sourceTree = "<group>"; };
 		9256C24B1CDE9B2300FEF16E /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		9256C24D1CDE9BE100FEF16E /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		9256C24F1CE380F800FEF16E /* ArtistList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArtistList.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +112,7 @@
 				9256C24B1CDE9B2300FEF16E /* API.swift */,
 				9256C24D1CDE9BE100FEF16E /* Constants.swift */,
 				9256C2471CDE188000FEF16E /* ArtistsViewController.swift */,
+				9256C24F1CE380F800FEF16E /* ArtistList.swift */,
 				9256C2491CDE196C00FEF16E /* Artist.swift */,
 				9256C21D1CDD745400FEF16E /* Main.storyboard */,
 				9256C2201CDD745400FEF16E /* Assets.xcassets */,
@@ -273,6 +276,7 @@
 				9256C24A1CDE196C00FEF16E /* Artist.swift in Sources */,
 				9256C21A1CDD745400FEF16E /* AppDelegate.swift in Sources */,
 				9256C24C1CDE9B2300FEF16E /* API.swift in Sources */,
+				9256C2501CE380F800FEF16E /* ArtistList.swift in Sources */,
 				9256C24E1CDE9BE100FEF16E /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

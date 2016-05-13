@@ -10,7 +10,10 @@ import Foundation
 
 class API{
     
-    class func getTopArtists(responseBlock: (NSError?) -> Void){
+//    let artistItem = ArtistList()
+    
+    class func getTopArtists(artistList: ArtistList, responseBlock: (NSError?) -> Void){
+//        let artistItem = ArtistList()
         let session = NSURLSession.sharedSession()
         let url = NSURL(string: Constants.topArtist)!
         let request = NSMutableURLRequest(URL: url)
@@ -25,19 +28,16 @@ class API{
                         if let artist = artists["artist"] as? [[String: AnyObject]]{
                             for item in artist{
                                 if let name = item["name"]{
-                                    print(name)
+                                    artistList.items.append(Artist(name: name as! String))
                                 }
-                                if let listeners = item["listeners"]{
-                                    print(listeners)
-                                }
+//                                if let listeners = item["listeners"]{
+//                                    print(listeners)
+//                                }
                             }
-                        }else{
-                            print("No hay dos")
                         }
-                    }else{
-                        print("No tiene el dato")
                     }
                 }
+                print("Acabo de terminar")
             }
         }
         task.resume()

@@ -86,12 +86,11 @@
                                 </tableViewCellContentView>
                             </tableViewCell>
                         </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="yAY-Cn-il9" id="ntN-MR-DRR"/>
-                            <outlet property="delegate" destination="yAY-Cn-il9" id="3cb-Fa-4hB"/>
-                        </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Artists" id="HY3-8x-vY2"/>
+                    <connections>
+                        <outlet property="artistTableView" destination="h4R-eJ-98N" id="PwQ-VO-7Xv"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kNP-Zn-sxg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

@@ -8,12 +8,15 @@
 
 import UIKit
 
-class ArtistsViewController: UITableViewController {
+class ArtistsViewController: UIViewController, UITableViewDelegate {
     
-    var items: [Artist]? = [Artist(name: "Luis")]
+    var artistList: ArtistList = ArtistList()
+    @IBOutlet var artistTableView: UITableView!
     
     override func viewDidLoad() {
-        API.getTopArtists({err -> Void in
+        super.viewDidLoad()
+        self.setupTableView()
+        API.getTopArtists(artistList, responseBlock: {err -> Void in
             if let _ = err{
                 self.showError()
             }else{
@@ -22,21 +25,25 @@ class ArtistsViewController: UITableViewController {
         })
     }
     
+    func setupTableView(){
+        self.artistTableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "cell")
+        self.artistTableView.dataSource = artistList
+        self.artistTableView.delegate = self
+    }
+    
     func showError(){
         let alert = UIAlertController(title: "Error", message: "A problem has ocurred", preferredStyle: .Alert)
-        let action = UIAlertAction(title: "Ok", style: .Default, handler: {_ in self.navigationController?.popViewControllerAnimated(true)})
+        let action = UIAlertAction(title: "Ok", style: .Default, handler: {_ in self.navigationController?.popViewControllerAnimated(true)
+        })
         alert.addAction(action)
         self.presentViewController(alert, animated: true, completion: nil)
     }
     
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return items!.count
+    // MARK: Delegate TableView methods
+    func scrollViewDidEndDragging(scrollView: UIScrollView, willDecelerate decelerate: Bool) {
+        print("Hola")
     }
     
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell : UITableViewCell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath)
-        let item = indexPath.row
-        cell.textLabel!.text = items![item].name
-        return cell
-    }
+    
+    
 }

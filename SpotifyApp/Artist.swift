@@ -20,4 +20,8 @@ class Artist {
     init(name: String){
         self.name = name
     }
+    
+    init(){
+        
+    }
 }
