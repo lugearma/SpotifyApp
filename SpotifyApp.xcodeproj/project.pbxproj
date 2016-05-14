@@ -19,6 +19,7 @@
 		9256C24C1CDE9B2300FEF16E /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9256C24B1CDE9B2300FEF16E /* API.swift */; };
 		9256C24E1CDE9BE100FEF16E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9256C24D1CDE9BE100FEF16E /* Constants.swift */; };
 		9256C2501CE380F800FEF16E /* ArtistList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9256C24F1CE380F800FEF16E /* ArtistList.swift */; };
+		9256C2571CE77B3C00FEF16E /* ArtistCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9256C2561CE77B3C00FEF16E /* ArtistCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		9256C24B1CDE9B2300FEF16E /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		9256C24D1CDE9BE100FEF16E /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		9256C24F1CE380F800FEF16E /* ArtistList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArtistList.swift; sourceTree = "<group>"; };
+		9256C2561CE77B3C00FEF16E /* ArtistCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArtistCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +115,7 @@
 				9256C24D1CDE9BE100FEF16E /* Constants.swift */,
 				9256C2471CDE188000FEF16E /* ArtistsViewController.swift */,
 				9256C24F1CE380F800FEF16E /* ArtistList.swift */,
+				9256C2561CE77B3C00FEF16E /* ArtistCell.swift */,
 				9256C2491CDE196C00FEF16E /* Artist.swift */,
 				9256C21D1CDD745400FEF16E /* Main.storyboard */,
 				9256C2201CDD745400FEF16E /* Assets.xcassets */,
@@ -273,6 +276,7 @@
 			files = (
 				9256C2481CDE188100FEF16E /* ArtistsViewController.swift in Sources */,
 				9256C21C1CDD745400FEF16E /* ViewController.swift in Sources */,
+				9256C2571CE77B3C00FEF16E /* ArtistCell.swift in Sources */,
 				9256C24A1CDE196C00FEF16E /* Artist.swift in Sources */,
 				9256C21A1CDD745400FEF16E /* AppDelegate.swift in Sources */,
 				9256C24C1CDE9B2300FEF16E /* API.swift in Sources */,
@@ -502,6 +506,7 @@
 				9256C2401CDD745400FEF16E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9256C2411CDD745400FEF16E /* Build configuration list for PBXNativeTarget "SpotifyAppTests" */ = {
 			isa = XCConfigurationList;
@@ -510,6 +515,7 @@
 				9256C2431CDD745400FEF16E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9256C2441CDD745400FEF16E /* Build configuration list for PBXNativeTarget "SpotifyAppUITests" */ = {
 			isa = XCConfigurationList;
@@ -518,6 +524,7 @@
 				9256C2461CDD745400FEF16E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

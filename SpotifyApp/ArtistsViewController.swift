@@ -26,9 +26,11 @@ class ArtistsViewController: UIViewController, UITableViewDelegate {
     }
     
     func setupTableView(){
-        self.artistTableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "cell")
+//        self.artistTableView.registerClass(ArtistCell.self, forCellReuseIdentifier: artistList.cellIdentifier)
         self.artistTableView.dataSource = artistList
         self.artistTableView.delegate = self
+        self.artistTableView.rowHeight = UITableViewAutomaticDimension
+        self.artistTableView.estimatedRowHeight = 160.0
     }
     
     func showError(){
@@ -41,7 +43,7 @@ class ArtistsViewController: UIViewController, UITableViewDelegate {
     
     // MARK: Delegate TableView methods
     func scrollViewDidEndDragging(scrollView: UIScrollView, willDecelerate decelerate: Bool) {
-        print("Hola")
+        self.artistTableView.reloadData()
     }
     
     

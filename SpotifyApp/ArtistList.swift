@@ -11,8 +11,8 @@ import UIKit
 class ArtistList: NSObject{
     
     var items: [Artist] = [Artist(name: "Luis")]
-    
-    
+    let cellIdentifier = "CustomCell"
+
     
 }
 
@@ -25,10 +25,16 @@ extension ArtistList: UITableViewDataSource{
     
     //Set content for each item
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell : UITableViewCell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath)
-        let item = indexPath.row
-        cell.textLabel!.text = items[item].name
+        let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath: indexPath) as! ArtistCell
+        setNameArtist(cell, index: indexPath)
+//        let item = indexPath.row
+//        cell.textLabel!.text = items[item].name
         return cell
+    }
+    
+    func setNameArtist(cell: ArtistCell, index indexPath: NSIndexPath){
+        let item = items[indexPath.row]
+        cell.nameLabel.text = item.name
     }
 
 }

@@ -68,22 +68,30 @@
                             <textInputTraits key="textInputTraits"/>
                         </searchBar>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" textLabel="EVa-hZ-eWy" style="IBUITableViewCellStyleDefault" id="zHg-m9-bvc">
-                                <rect key="frame" x="0.0" y="136" width="375" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CustomCell" rowHeight="83" id="zHg-m9-bvc" customClass="ArtistCell" customModule="SpotifyApp" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="136" width="375" height="83"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="zHg-m9-bvc" id="X0C-79-bR9">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="82"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="EVa-hZ-eWy">
-                                            <rect key="frame" x="15" y="0.0" width="345" height="43"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SKi-kG-sSd">
+                                            <rect key="frame" x="0.0" y="30" width="375" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="SKi-kG-sSd" secondAttribute="trailing" id="QTw-tC-DTU"/>
+                                        <constraint firstItem="SKi-kG-sSd" firstAttribute="top" secondItem="X0C-79-bR9" secondAttribute="top" constant="30" id="ftc-jh-5rl"/>
+                                        <constraint firstAttribute="bottom" secondItem="SKi-kG-sSd" secondAttribute="bottom" constant="31" id="jBQ-Va-Pjd"/>
+                                        <constraint firstItem="SKi-kG-sSd" firstAttribute="leading" secondItem="X0C-79-bR9" secondAttribute="leading" id="vd0-yP-kUC"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="nameLabel" destination="SKi-kG-sSd" id="5os-na-u2t"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                     </tableView>
