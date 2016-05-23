@@ -81,15 +81,23 @@
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="47D-Il-Hc1">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="82"/>
+                                        </imageView>
                                     </subviews>
                                     <constraints>
                                         <constraint firstAttribute="trailing" secondItem="SKi-kG-sSd" secondAttribute="trailing" id="QTw-tC-DTU"/>
+                                        <constraint firstAttribute="trailing" secondItem="47D-Il-Hc1" secondAttribute="trailing" id="Qzf-RQ-PzH"/>
+                                        <constraint firstItem="47D-Il-Hc1" firstAttribute="top" secondItem="X0C-79-bR9" secondAttribute="top" id="cdz-wK-nE1"/>
+                                        <constraint firstAttribute="bottom" secondItem="47D-Il-Hc1" secondAttribute="bottom" id="d3o-d3-Ow3"/>
                                         <constraint firstItem="SKi-kG-sSd" firstAttribute="top" secondItem="X0C-79-bR9" secondAttribute="top" constant="30" id="ftc-jh-5rl"/>
                                         <constraint firstAttribute="bottom" secondItem="SKi-kG-sSd" secondAttribute="bottom" constant="31" id="jBQ-Va-Pjd"/>
                                         <constraint firstItem="SKi-kG-sSd" firstAttribute="leading" secondItem="X0C-79-bR9" secondAttribute="leading" id="vd0-yP-kUC"/>
+                                        <constraint firstItem="47D-Il-Hc1" firstAttribute="leading" secondItem="X0C-79-bR9" secondAttribute="leading" id="zYt-kh-63i"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="imageArtist" destination="47D-Il-Hc1" id="Jde-id-ece"/>
                                     <outlet property="nameLabel" destination="SKi-kG-sSd" id="5os-na-u2t"/>
                                 </connections>
                             </tableViewCell>

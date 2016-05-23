@@ -10,10 +10,10 @@ import Foundation
 
 class API{
     
-//    let artistItem = ArtistList()
+    
     
     class func getTopArtists(artistList: ArtistList, responseBlock: (NSError?) -> Void){
-//        let artistItem = ArtistList()
+        
         let session = NSURLSession.sharedSession()
         let url = NSURL(string: Constants.topArtist)!
         let request = NSMutableURLRequest(URL: url)

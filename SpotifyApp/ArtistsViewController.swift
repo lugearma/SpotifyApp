@@ -26,6 +26,7 @@ class ArtistsViewController: UIViewController, UITableViewDelegate {
     }
     
     func setupTableView(){
+        //commented to use custom cell
 //        self.artistTableView.registerClass(ArtistCell.self, forCellReuseIdentifier: artistList.cellIdentifier)
         self.artistTableView.dataSource = artistList
         self.artistTableView.delegate = self

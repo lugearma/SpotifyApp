@@ -10,18 +10,14 @@ import Foundation
 
 class Artist {
     var name:String?
-    
-//    var name: String {
-//        get {
-//            return self._name!
-//        }
-//    }
+    var urlImage: String?
+
+    init(name: String, url: String){
+        self.name = name
+        self.urlImage = url
+    }
     
     init(name: String){
         self.name = name
-    }
-    
-    init(){
-        
     }
 }
