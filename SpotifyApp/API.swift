@@ -10,9 +10,10 @@ import Foundation
 
 class API{
     
-    
-    
+    //Get dato from API and parsing of raw way :P
     class func getTopArtists(artistList: ArtistList, responseBlock: (NSError?) -> Void){
+        var nameJSON: String = ""
+        var urlImageJSON: String = ""
         
         let session = NSURLSession.sharedSession()
         let url = NSURL(string: Constants.topArtist)!
@@ -27,17 +28,25 @@ class API{
                     if let artists = result["artists"] as? [String: AnyObject]{
                         if let artist = artists["artist"] as? [[String: AnyObject]]{
                             for item in artist{
+                                //Get artist name from JSON
                                 if let name = item["name"]{
-                                    artistList.items.append(Artist(name: name as! String))
+                                    nameJSON = name as! String
                                 }
-//                                if let listeners = item["listeners"]{
-//                                    print(listeners)
-//                                }
+                                //Get url of images from JSON
+                                if let images = item["image"] as? [[String: AnyObject]]{
+                                    for image in images{
+                                        //Get specfic extralarge image
+                                        if image["size"] as! String == "extralarge"{
+                                            urlImageJSON = image["#text"] as! String
+                                        }
+                                    }
+                                }
+                                //Add artist to our list
+                                artistList.items.append(Artist(name: nameJSON, url: urlImageJSON))
                             }
                         }
                     }
                 }
-                print("Acabo de terminar")
             }
         }
         task.resume()
