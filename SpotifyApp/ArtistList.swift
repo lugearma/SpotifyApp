@@ -10,9 +10,9 @@ import UIKit
 import SDWebImage
 
 class ArtistList: NSObject{
-    
     var items: [Artist] = [Artist(name: "Luis", url:"https://s-media-cache-ak0.pinimg.com/736x/27/df/cc/27dfcc17a8cefe56c99277d63be0d815.jpg")]
     let cellIdentifier = "CustomCell"
+    
     
     
 
@@ -40,5 +40,4 @@ extension ArtistList: UITableViewDataSource{
         cell.nameLabel.text = item.name
         cell.imageArtist.sd_setImageWithURL(NSURL(string: item.urlImage!), placeholderImage: UIImage(named: "placeholder.jpg"))
     }
-
 }

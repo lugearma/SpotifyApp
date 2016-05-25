@@ -17,5 +17,4 @@ class ArtistCell: UITableViewCell{
     override func awakeFromNib(){
         super.awakeFromNib()
     }
-    
 }

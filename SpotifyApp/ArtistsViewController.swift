@@ -30,8 +30,7 @@ class ArtistsViewController: UIViewController, UITableViewDelegate {
 //        self.artistTableView.registerClass(ArtistCell.self, forCellReuseIdentifier: artistList.cellIdentifier)
         self.artistTableView.dataSource = artistList
         self.artistTableView.delegate = self
-        self.artistTableView.rowHeight = UITableViewAutomaticDimension
-        self.artistTableView.estimatedRowHeight = 160.0
+        self.artistTableView.rowHeight = 150
     }
     
     func showError(){
