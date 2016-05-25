@@ -11,6 +11,7 @@ import SDWebImage
 
 class ArtistList: NSObject{
     var items: [Artist] = [Artist(name: "Luis", url:"https://s-media-cache-ak0.pinimg.com/736x/27/df/cc/27dfcc17a8cefe56c99277d63be0d815.jpg")]
+    var filteredData: [Artist] = [Artist(name: "Zari", url:"https://s-media-cache-ak0.pinimg.com/736x/27/df/cc/27dfcc17a8cefe56c99277d63be0d815.jpg")]
     let cellIdentifier = "CustomCell"
     
     
@@ -23,7 +24,8 @@ extension ArtistList: UITableViewDataSource{
     
     //Return number of items
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return items.count
+        //return items.count
+        return filteredData.count
     }
     
     //Set content for each item
@@ -36,7 +38,8 @@ extension ArtistList: UITableViewDataSource{
     }
     
     func setNameArtist(cell: ArtistCell, index indexPath: NSIndexPath){
-        let item = items[indexPath.row]
+//        let item = items[indexPath.row]
+        let item = filteredData[indexPath.row]
         cell.nameLabel.text = item.name
         cell.imageArtist.sd_setImageWithURL(NSURL(string: item.urlImage!), placeholderImage: UIImage(named: "placeholder.jpg"))
     }

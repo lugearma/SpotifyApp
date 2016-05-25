@@ -106,6 +106,7 @@
                     <navigationItem key="navigationItem" title="Artists" id="HY3-8x-vY2"/>
                     <connections>
                         <outlet property="artistTableView" destination="h4R-eJ-98N" id="PwQ-VO-7Xv"/>
+                        <outlet property="searchBar" destination="Y3Y-cV-Xdf" id="ieI-I9-DAl"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kNP-Zn-sxg" userLabel="First Responder" sceneMemberID="firstResponder"/>

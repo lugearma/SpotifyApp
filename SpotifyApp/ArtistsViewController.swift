@@ -8,14 +8,16 @@
 
 import UIKit
 
-class ArtistsViewController: UIViewController, UITableViewDelegate {
+class ArtistsViewController: UIViewController, UITableViewDelegate, UISearchBarDelegate {
     
     var artistList: ArtistList = ArtistList()
     @IBOutlet var artistTableView: UITableView!
+    @IBOutlet weak var searchBar: UISearchBar!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setupTableView()
+        searchBar.delegate = self
         API.getTopArtists(artistList, responseBlock: {err -> Void in
             if let _ = err{
                 self.showError()
@@ -26,8 +28,6 @@ class ArtistsViewController: UIViewController, UITableViewDelegate {
     }
     
     func setupTableView(){
-        //commented to use custom cell
-//        self.artistTableView.registerClass(ArtistCell.self, forCellReuseIdentifier: artistList.cellIdentifier)
         self.artistTableView.dataSource = artistList
         self.artistTableView.delegate = self
         self.artistTableView.rowHeight = 150
@@ -43,9 +43,20 @@ class ArtistsViewController: UIViewController, UITableViewDelegate {
     
     // MARK: Delegate TableView methods
     func scrollViewDidEndDragging(scrollView: UIScrollView, willDecelerate decelerate: Bool) {
+        artistList.filteredData = artistList.items
         self.artistTableView.reloadData()
     }
     
-    
-    
+    //MARK: Delegate SearchBar methos
+    func searchBar(searchBar: UISearchBar, textDidChange searchText: String) {
+        if searchText.isEmpty{
+            artistList.filteredData = artistList.items
+        }else{
+            artistList.filteredData = artistList.items.filter({ (data: Artist) -> Bool in
+                let name = data.name
+                return name?.rangeOfString(searchText) != nil
+            })
+        }
+        artistTableView.reloadData()
+    }
 }
