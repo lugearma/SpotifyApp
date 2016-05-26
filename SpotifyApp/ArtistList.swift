@@ -10,8 +10,8 @@ import UIKit
 import SDWebImage
 
 class ArtistList: NSObject{
-    var items: [Artist] = [Artist(name: "Luis", url:"https://s-media-cache-ak0.pinimg.com/736x/27/df/cc/27dfcc17a8cefe56c99277d63be0d815.jpg")]
-    var filteredData: [Artist] = [Artist(name: "Zari", url:"https://s-media-cache-ak0.pinimg.com/736x/27/df/cc/27dfcc17a8cefe56c99277d63be0d815.jpg")]
+    var items: [Artist] = []
+    var filteredData: [Artist] = []
     let cellIdentifier = "CustomCell"
     
     
