@@ -17,6 +17,7 @@ class ArtistsViewController: UIViewController, UITableViewDelegate, UISearchBarD
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setupTableView()
+        customizeNavbar()
         searchBar.delegate = self
         API.getTopArtists(artistList, responseBlock: {err -> Void in
             if let _ = err{
@@ -26,6 +27,17 @@ class ArtistsViewController: UIViewController, UITableViewDelegate, UISearchBarD
                 self.navigationController?.popViewControllerAnimated(true)
             }
         })
+    }
+    
+    func customizeNavbar(){
+        let attributes = [ NSForegroundColorAttributeName: UIColor.orangeColor()]
+        let navbar = self.navigationController?.navigationBar
+        navbar?.tintColor = UIColor.orangeColor()
+        navbar?.barStyle = UIBarStyle.BlackTranslucent
+       
+        navbar!.titleTextAttributes = attributes
+        
+        
     }
     
     func setupTableView(){

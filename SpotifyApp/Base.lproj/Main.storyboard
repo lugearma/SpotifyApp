@@ -114,7 +114,7 @@
             </objects>
             <point key="canvasLocation" x="1740.5" y="-107.5"/>
         </scene>
-        <!--View Controller-->
+        <!--Artist Detail-->
         <scene sceneID="T0Q-vQ-4iW">
             <objects>
                 <viewController id="6sS-5A-8ua" sceneMemberID="viewController">
@@ -127,7 +127,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="MM8-Pv-wth"/>
+                    <navigationItem key="navigationItem" title="Artist Detail" id="MM8-Pv-wth"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ycz-tm-raL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
