@@ -10,12 +10,14 @@ import UIKit
 
 class ArtisDetailViewController: UIViewController{
     
-    var navBarText = ""
+    var titleText = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print(navBarText)
-        print("Hello this is second view")
-        
+        setTextNavbar(titleText)
+    }
+    
+    func setTextNavbar(text: String){
+        self.title = text
     }
 }

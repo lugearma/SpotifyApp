@@ -65,9 +65,11 @@ class ArtistsViewController: UIViewController, UITableViewDelegate, UISearchBarD
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         print(segue.identifier)
         if segue.identifier == "ArtistDetail"{
-            let indexPath = self.artistTableView.indexPathForSelectedRow
             let artistDetailView = segue.destinationViewController as! ArtisDetailViewController
-            artistDetailView.navBarText = artistList.items[(indexPath?.row)!].name!
+            let indexPath = self.artistTableView.indexPathForSelectedRow
+            let name = artistList.items[(indexPath?.row)!].name!
+            //Passing name to property
+            artistDetailView.titleText = name
         }
     }
     
