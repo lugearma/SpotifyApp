@@ -13,11 +13,6 @@ class ArtistList: NSObject{
     var items: [Artist] = []
     var filteredData: [Artist] = []
     let cellIdentifier = "CustomCell"
-    
-    
-    
-
-    
 }
 
 extension ArtistList: UITableViewDataSource{
@@ -32,8 +27,7 @@ extension ArtistList: UITableViewDataSource{
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath: indexPath) as! ArtistCell
         setNameArtist(cell, index: indexPath)
-//        let item = indexPath.row
-//        cell.textLabel!.text = items[item].name
+        
         return cell
     }
     
