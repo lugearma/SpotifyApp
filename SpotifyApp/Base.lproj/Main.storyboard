@@ -75,7 +75,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="82"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="47D-Il-Hc1">
+                                        <imageView contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="47D-Il-Hc1">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="82"/>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SKi-kG-sSd">
@@ -107,11 +107,31 @@
                     <connections>
                         <outlet property="artistTableView" destination="h4R-eJ-98N" id="PwQ-VO-7Xv"/>
                         <outlet property="searchBar" destination="Y3Y-cV-Xdf" id="ieI-I9-DAl"/>
+                        <segue destination="6sS-5A-8ua" kind="show" identifier="ArtistDetail" id="fT6-Zs-6n1"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kNP-Zn-sxg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1740.5" y="-107.5"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="T0Q-vQ-4iW">
+            <objects>
+                <viewController id="6sS-5A-8ua" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="SnL-Mp-aDE"/>
+                        <viewControllerLayoutGuide type="bottom" id="b52-yB-LGO"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="9E9-xh-RC3">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="MM8-Pv-wth"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ycz-tm-raL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2313.5" y="-107.5"/>
         </scene>
         <!--Albums-->
         <scene sceneID="OMW-2p-wV7">

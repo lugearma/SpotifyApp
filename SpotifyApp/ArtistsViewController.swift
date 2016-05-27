@@ -22,6 +22,7 @@ class ArtistsViewController: UIViewController, UITableViewDelegate, UISearchBarD
             if let _ = err{
                 self.showError()
             }else{
+                self.artistTableView.reloadData()
                 self.navigationController?.popViewControllerAnimated(true)
             }
         })
@@ -45,6 +46,10 @@ class ArtistsViewController: UIViewController, UITableViewDelegate, UISearchBarD
     func scrollViewDidEndDragging(scrollView: UIScrollView, willDecelerate decelerate: Bool) {
         artistList.filteredData = artistList.items
         self.artistTableView.reloadData()
+    }
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        self.performSegueWithIdentifier("ArtistDetail", sender: self)
     }
     
     //MARK: Delegate SearchBar methos

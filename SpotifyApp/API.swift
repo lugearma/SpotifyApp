@@ -10,7 +10,7 @@ import Foundation
 
 class API{
     
-    //Get dato from API and parsing of raw way :P
+    //Get data from API and raw way parsing :P
     class func getTopArtists(artistList: ArtistList, responseBlock: (NSError?) -> Void){
         var nameJSON: String = ""
         var urlImageJSON: String = ""
