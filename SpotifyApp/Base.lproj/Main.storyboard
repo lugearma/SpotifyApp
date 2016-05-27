@@ -117,7 +117,7 @@
         <!--Artist Detail-->
         <scene sceneID="T0Q-vQ-4iW">
             <objects>
-                <viewController id="6sS-5A-8ua" sceneMemberID="viewController">
+                <viewController id="6sS-5A-8ua" customClass="ArtisDetailViewController" customModule="SpotifyApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="SnL-Mp-aDE"/>
                         <viewControllerLayoutGuide type="bottom" id="b52-yB-LGO"/>

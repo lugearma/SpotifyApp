@@ -36,8 +36,6 @@ class ArtistsViewController: UIViewController, UITableViewDelegate, UISearchBarD
         navbar?.barStyle = UIBarStyle.BlackTranslucent
        
         navbar!.titleTextAttributes = attributes
-        
-        
     }
     
     func setupTableView(){
@@ -62,6 +60,15 @@ class ArtistsViewController: UIViewController, UITableViewDelegate, UISearchBarD
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         self.performSegueWithIdentifier("ArtistDetail", sender: self)
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        print(segue.identifier)
+        if segue.identifier == "ArtistDetail"{
+            let indexPath = self.artistTableView.indexPathForSelectedRow
+            let artistDetailView = segue.destinationViewController as! ArtisDetailViewController
+            artistDetailView.navBarText = artistList.items[(indexPath?.row)!].name!
+        }
     }
     
     //MARK: Delegate SearchBar methos

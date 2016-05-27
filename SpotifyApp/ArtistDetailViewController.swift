@@ -9,7 +9,13 @@
 import UIKit
 
 class ArtisDetailViewController: UIViewController{
+    
+    var navBarText = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        print(navBarText)
+        print("Hello this is second view")
+        
     }
 }
